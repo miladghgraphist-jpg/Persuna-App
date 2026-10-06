@@ -107,3 +107,7 @@ body,.content{background:#151515}
 .pipeline-track i{display:block;height:100%;min-width:2px;background:#8b5cf6;border-radius:99px;transition:width .3s ease}
 @media(max-width:900px){.chart-grid{grid-template-columns:1fr}}
 @media(max-width:720px){.chart-card{padding:13px;min-height:245px}.line-chart{height:135px}.pipeline-chart{gap:13px}}
+
+/* Studio-specific form system */
+.modal-wide{width:min(820px,100%);max-height:calc(100vh - 40px);overflow:auto}.form-section{border-top:1px solid #303030;padding-top:14px;margin-top:14px}.form-section:first-of-type{border-top:0;padding-top:0;margin-top:0}.form-section-title{display:block;color:#a78bfa;font-size:9px;font-weight:700;letter-spacing:1.2px;text-transform:uppercase;margin-bottom:10px}.form-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.form-grid label{margin-top:0}.form-grid label:has(textarea),.form-section>label{grid-column:1/-1}.modal select{width:100%;color:#f4f4f4;padding:10px;outline:0}.modal textarea{min-height:82px;resize:vertical}.modal-wide .actions{position:sticky;bottom:-20px;background:#1b1b1b;padding-top:12px}
+@media(max-width:720px){.modal-wide{max-height:calc(100vh - 20px)}.form-grid{grid-template-columns:1fr}.form-grid label:has(textarea){grid-column:auto}.modal-wide .actions{bottom:-16px}}
