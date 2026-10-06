@@ -23,3 +23,20 @@
 .account-card{width:min(680px,100%);padding:22px;background:#121021;border-radius:16px}.account-head{display:flex;justify-content:space-between;gap:15px}.account-head h2{margin:5px 0 3px;font-size:20px}.account-head p{margin:0;color:#777084;font-size:10px}.avatar-editor{display:flex;align-items:center;gap:14px;margin:22px 0 6px}.avatar.large{width:82px;height:82px;font-size:25px;overflow:hidden}.avatar img,.profile .avatar img{width:100%;height:100%;object-fit:cover;border-radius:inherit}.upload-btn{display:inline-flex!important;align-items:center;gap:7px!important;width:max-content!important;border:1px solid #302947;background:#171329;color:#c9bee0;border-radius:8px;padding:8px 10px!important;cursor:pointer!important}.upload-btn input{display:none!important}.account-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.account-card .actions{margin-top:14px}.account-divider{height:1px;background:#2b2641;margin:22px 0}.account-password>b{display:block;font-size:11px}.account-password>small{display:block;color:#777084;font-size:9px;margin-top:4px}.password-row{display:flex;gap:8px;margin-top:10px}.password-row input{flex:1}.profile-btn{border:0;background:none;color:inherit;padding:0;text-align:left;display:flex;gap:8px;align-items:center}.profile-btn:hover .avatar{box-shadow:0 0 0 2px #8b5cf655}
 @media(max-width:900px){.settings-grid{grid-template-columns:1fr}.quick-dash-main{align-items:flex-start;flex-direction:column}.quick-actions{justify-content:flex-start}}
 @media(max-width:720px){.account-card{padding:16px}.account-grid{grid-template-columns:1fr}.password-row{flex-direction:column}.settings-save{align-items:flex-start;gap:10px;flex-direction:column}.quick-actions{width:100%}.quick-actions button{flex:1}}
+
+.quick-dash{position:relative}
+.quick-dash-main{min-height:58px}
+.quick-launch{position:relative;display:flex;align-items:center}
+.quick-plus{width:42px;height:42px;display:grid;place-items:center;border:1px solid #4a3970;border-radius:11px;background:#17112a;color:#d9c9ff;transition:.18s ease;box-shadow:0 8px 25px #0004}
+.quick-plus:hover,.quick-plus.open{background:#7c3aed;border-color:#9a78ff;color:#fff;box-shadow:0 10px 30px #6d35d644}
+.quick-plus.open{transform:rotate(45deg)}
+.quick-menu{position:absolute;right:0;top:51px;z-index:20;width:205px;padding:7px;background:#121021ee;border:1px solid #3a2d56;border-radius:12px;box-shadow:0 22px 55px #000b;backdrop-filter:blur(18px)}
+.quick-menu button{display:block;width:100%;border:0;background:transparent;color:#cfc5df;text-align:left;padding:10px 11px;border-radius:8px;font-size:10px}
+.quick-menu button:hover{background:#21173a;color:#fff}
+.side{z-index:40}
+@media(max-width:720px){
+ .side.open{z-index:100}
+ .quick-dash-main{min-height:58px}
+ .quick-launch{align-self:flex-end}
+ .quick-menu{right:0;left:auto;top:50px}
+}
