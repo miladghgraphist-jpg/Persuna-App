@@ -70,3 +70,15 @@ body{font-size:14px;line-height:1.45}
 
 /* Dark gray correction: keep all primary canvas surfaces neutral charcoal. */
 .side{background:#171717}.main header{background:#151515}.content{background:#151515}.card{background:#1b1b1b}.modal{background:#1b1b1b}.auth-card{background:#1b1b1b}.quick-menu{background:#1b1b1b}.quick-dash{background:#1b1b1b}
+
+
+/* Final baseline: neutral charcoal surfaces; purple is accent only. */
+body,.content{background:#151515}
+.side,.main header{background:#171717}
+.search,.field,.toolbar select,.modal input,.modal textarea,.modal select,.setting-form input,.setting-form select,.account-card input{background:#191919}
+.card,.modal,.auth-card,.quick-dash,.quick-menu,.account-card{background:#1b1b1b}
+.btn,.quick-actions button,.action-btn,.type-pill,.icon-btn,.quick-plus{background:#191919}
+.task em,.status,.nav em{background:#222022}
+.auth{background:#151515}
+.entity:hover{background:#1e1e1e}
+.quick-dash{border-color:#303030}
