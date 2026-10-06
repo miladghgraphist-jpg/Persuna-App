@@ -15,19 +15,56 @@ export async function listWorkspaceRecords(
   return result.data ?? [];
 }
 
-export async function insertWorkspaceRecord(supabase: SupabaseClient, table: string, values: DbRecord) {
-  const result = await supabase.from(table).insert(values);
+export async function insertWorkspaceRecord(
+  supabase: SupabaseClient,
+  table: string,
+  values: DbRecord
+) {
+  const result = await supabase.from(table).insert(values).select("id").single();
   if (result.error) throw result.error;
-  return result.data ?? [];
+  if (!result.data?.id) throw new Error("Record was not created.");
+  return result.data;
 }
 
-export async function updateWorkspaceRecord(supabase: SupabaseClient, table: string, id: string, workspaceId: string, values: DbRecord) {
-  const result = await supabase.from(table).update(values).eq("id", id).eq("workspace_id", workspaceId);
+export async function updateWorkspaceRecord(
+  supabase: SupabaseClient,
+  table: string,
+  id: string,
+  workspaceId: string,
+  values: DbRecord
+) {
+  const result = await supabase
+    .from(table)
+    .update(values)
+    .eq("id", id)
+    .eq("workspace_id", workspaceId)
+    .select("id")
+    .maybeSingle();
+
   if (result.error) throw result.error;
-  return result.data ?? [];
+  if (!result.data?.id) {
+    throw new Error("Record was not updated. It may no longer exist or you may not have access to it.");
+  }
+  return result.data;
 }
 
-export async function deleteWorkspaceRecord(supabase: SupabaseClient, table: string, id: string, workspaceId: string) {
-  const result = await supabase.from(table).delete().eq("id", id).eq("workspace_id", workspaceId);
+export async function deleteWorkspaceRecord(
+  supabase: SupabaseClient,
+  table: string,
+  id: string,
+  workspaceId: string
+) {
+  const result = await supabase
+    .from(table)
+    .delete()
+    .eq("id", id)
+    .eq("workspace_id", workspaceId)
+    .select("id")
+    .maybeSingle();
+
   if (result.error) throw result.error;
+  if (!result.data?.id) {
+    throw new Error("Record was not deleted. It may no longer exist or you may not have access to it.");
+  }
+  return result.data;
 }
