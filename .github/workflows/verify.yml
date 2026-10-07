@@ -1,4 +1,4 @@
-name: Verify Persuna OS
+name: Verify Persuna-App
 on:
   push:
     branches: [main]
