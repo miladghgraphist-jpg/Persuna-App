@@ -115,3 +115,312 @@ body,.content{background:#151515}
 .clickable-row{cursor:pointer}.clickable-row:hover td{background:rgba(139,92,246,.06)}.client360-panel{margin-bottom:16px}.client360-panel h2{margin:4px 0 3px;font-size:22px}.client360-panel .kpis{margin:16px 0}.client360-panel .panel{min-width:0}
 
 .sales-pipeline{display:grid;grid-template-columns:repeat(6,1fr);gap:8px;margin-bottom:13px}.pipeline-stage{padding:13px;background:#11101d;border:1px solid #2b2641;border-radius:9px}.pipeline-stage-head{display:flex;justify-content:space-between;gap:8px;color:#918aa8;font-size:9px}.pipeline-stage-head b{color:#cfc5df}.pipeline-stage strong{display:block;margin-top:10px;font-size:12px}.project-workspace{padding:17px;margin-bottom:13px}.project-workspace h2{margin:5px 0 3px;font-size:20px}.project-workspace p{margin:0;color:#918aa8;font-size:10px}.project-actions{display:flex;gap:8px;flex-wrap:wrap;margin:13px 0}.quick-project{display:inline-flex;align-items:center;gap:6px;border:1px solid #302947;background:#12101e;color:#bcb1d0;border-radius:8px;padding:8px 10px;font-size:9px}.quick-project:hover{border-color:#8b5cf6;color:#fff;background:#1a1430}.project-columns{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin-top:13px}.clickable-row{cursor:pointer}.clickable-row:hover td{background:#19152e}.record-count{margin-left:auto;align-self:center;color:#6f6880;font-size:9px}.crm-tabs{display:flex;gap:5px;margin-bottom:13px}.crm-tabs button{border:1px solid #2b2641;background:#11101b;color:#8f879f;border-radius:8px;padding:8px 12px;font-size:9px}.crm-tabs button.active{border-color:#7250bd;background:#241941;color:#fff}@media(max-width:1050px){.sales-pipeline{grid-template-columns:repeat(3,1fr)}.project-columns{grid-template-columns:1fr}}@media(max-width:720px){.sales-pipeline{grid-template-columns:repeat(2,1fr)}.project-workspace{padding:13px}.record-count{margin-left:0}.crm-tabs{overflow:auto}.crm-tabs button{white-space:nowrap}}
+
+
+/* =========================================================
+   Persuna App — Visual Foundation A
+   Typography · Iconography · Spacing · Buttons · Inputs · Cards · Status
+   ========================================================= */
+
+:root{
+  --p-bg:#151515;
+  --p-surface:#1b1b1b;
+  --p-surface-raised:#202020;
+  --p-surface-soft:#181818;
+  --p-line:#303030;
+  --p-line-soft:#272727;
+  --p-text:#f1f0f2;
+  --p-text-strong:#f7f6f8;
+  --p-muted:#969196;
+  --p-muted-2:#706b72;
+  --p-accent:#8b5cf6;
+  --p-accent-soft:#a78bfa;
+  --p-danger:#c47791;
+  --p-radius:9px;
+}
+
+/* 01 — Typography */
+html,body{
+  font-family:Inter,Vazirmatn,"Helvetica Neue",Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+body{
+  font-size:13px;
+  line-height:1.5;
+  letter-spacing:-.005em;
+}
+button,input,select,textarea{font-family:inherit}
+.head h1{
+  font-size:28px;
+  line-height:1.12;
+  font-weight:550;
+  letter-spacing:-.8px;
+}
+.head p{
+  font-size:11px;
+  line-height:1.5;
+  font-weight:400;
+}
+.panel-head h3,
+.kpi strong,
+.modal h2,
+.account-head h2,
+.setting-form h3{
+  font-weight:550;
+  letter-spacing:-.2px;
+}
+.kpi strong{font-size:23px}
+.kpi>span,
+.kpi small,
+.task small,
+.meeting small,
+td small,
+.entity small,
+.report small,
+.setting small{
+  font-weight:400;
+}
+.ey{
+  font-weight:550;
+  letter-spacing:1.65px;
+}
+.label{
+  font-weight:500;
+  letter-spacing:1.7px;
+}
+
+/* 02 — Iconography */
+svg{
+  stroke-width:1.55;
+}
+.nav svg,
+.quick svg,
+.kicon svg,
+.bell svg,
+.hamb svg,
+.icon-btn svg,
+.search svg,
+.field svg{
+  stroke-width:1.5;
+}
+.kicon{
+  width:30px;
+  height:30px;
+  border-radius:8px;
+  background:transparent;
+  color:#8e8894;
+}
+.nav .active svg{color:var(--p-accent-soft)}
+.kicon svg{width:17px;height:17px}
+.bell,.icon-btn,.hamb{
+  box-shadow:none;
+}
+.bell{
+  background:transparent;
+  border-color:transparent;
+  color:#88838b;
+}
+.bell:hover{color:#e7e3e9;background:#1b1b1b}
+.profile-btn svg{stroke-width:1.5}
+
+/* 03 — Spacing rhythm */
+.content{padding:28px 30px 46px}
+.head{margin:2px 0 22px}
+.kpis,.three,.two,.chart-grid,.report-grid,.settings-grid{gap:12px}
+.panel{padding:17px}
+.table{padding:14px}
+.panel-head{margin-bottom:13px}
+.task{padding:10px 2px}
+.meeting{padding:10px 0}
+.finance-mini div{padding:10px 0}
+
+/* 04 — Buttons */
+.primary{
+  min-height:36px;
+  padding:8px 12px;
+  border:1px solid #815be1;
+  border-radius:8px;
+  background:var(--p-accent);
+  color:#fff;
+  font-size:11px;
+  font-weight:550;
+  box-shadow:none;
+  transition:background .16s ease,border-color .16s ease,transform .16s ease;
+}
+.primary:hover{
+  background:#966cf8;
+  border-color:#a184ff;
+  transform:translateY(-1px);
+  box-shadow:none;
+}
+.primary:active{transform:translateY(0)}
+.btn{
+  min-height:36px;
+  padding:8px 12px;
+  border-radius:8px;
+  background:#202020;
+  border:1px solid #353535;
+  color:#c4bec7;
+  font-size:11px;
+  font-weight:500;
+}
+.btn:hover{background:#252525;border-color:#454045;color:#eeeaf0}
+.action-btn{
+  border-radius:6px;
+  padding:6px 9px;
+  background:#1a1a1a;
+  border-color:#353535;
+  color:#aaa4ad;
+  font-weight:450;
+}
+.action-btn:hover{
+  border-color:#66518b;
+  background:#211c2a;
+  color:#eeeaf2;
+}
+.link{
+  color:#9b86c4;
+  font-weight:450;
+}
+.link:hover{color:#c1aff0}
+
+/* 05 — Inputs / controls */
+.search,.field{
+  min-height:38px;
+  background:#191919;
+  border:1px solid #303030;
+  border-radius:8px;
+  box-shadow:none;
+}
+.search input,.field input{
+  color:#e8e5e9;
+  font-size:11px;
+  font-weight:400;
+}
+.search input::placeholder,.field input::placeholder{
+  color:#68636b;
+}
+.toolbar select,
+.modal input,.modal textarea,.modal select,
+.setting-form input,.setting-form select,.account-card input{
+  min-height:37px;
+  background:#191919;
+  border:1px solid #303030;
+  border-radius:7px;
+  color:#e9e6eb;
+  font-size:11px;
+}
+.modal textarea{line-height:1.5}
+.modal input:focus,.modal textarea:focus,.modal select:focus,
+.setting-form input:focus,.setting-form select:focus,.account-card input:focus{
+  border-color:#66508f;
+  box-shadow:0 0 0 3px rgba(139,92,246,.055);
+}
+input::placeholder,textarea::placeholder{color:#666168}
+
+/* 06 — Cards / surfaces */
+.card{
+  background:var(--p-surface);
+  border:1px solid var(--p-line);
+  border-radius:var(--p-radius);
+  box-shadow:none;
+}
+.card:hover{box-shadow:none}
+.kpi{
+  min-height:124px;
+  padding:16px;
+}
+.panel{min-height:210px}
+.table{margin-top:12px}
+.entity{
+  background:#1b1b1b;
+  border-color:#303030;
+  border-radius:9px;
+}
+.entity:hover{
+  background:#1d1d1d;
+  border-color:#3b383e;
+}
+.modal{
+  background:#1b1b1b;
+  border-color:#353238;
+  border-radius:11px;
+  box-shadow:0 28px 80px rgba(0,0,0,.58);
+}
+.quick-menu{
+  background:#1b1b1b;
+  border-color:#353238;
+  border-radius:9px;
+  box-shadow:0 20px 45px rgba(0,0,0,.5);
+}
+.quick-menu button{
+  color:#bdb7c1;
+  font-size:10px;
+}
+.quick-menu button:hover{background:#242126;color:#f4f1f6}
+
+/* 07 — Status language */
+.status,.task em,.type-pill{
+  border:1px solid #302c34;
+  background:#1c1a1e;
+  color:#a9a1ab;
+  font-weight:450;
+}
+.status{padding:4px 7px}
+.task em{padding:4px 7px}
+.ok{color:#b9a3f5!important}
+.action-btn.danger:hover{
+  border-color:#805266;
+  background:#271b21;
+  color:#e8c8d4;
+}
+
+/* Quiet table treatment */
+th{
+  font-size:9px;
+  font-weight:500;
+  letter-spacing:.2px;
+}
+td{font-size:10px}
+td b{font-weight:550}
+tr:hover td{background:rgba(255,255,255,.012)}
+
+/* Quiet navigation */
+.nav button,.quick{
+  font-size:11px;
+  font-weight:450;
+}
+.nav button{
+  min-height:38px;
+}
+.nav .active{
+  background:rgba(139,92,246,.085);
+}
+.nav button:hover{
+  background:#1b1b1b;
+}
+
+/* Primary + in the header: compact, quiet, intentional */
+.main header .quick-plus{
+  width:36px;
+  height:36px;
+  border-radius:8px;
+  background:transparent;
+  border:1px solid #3a363d;
+  color:#aaa4ad;
+  box-shadow:none;
+}
+.main header .quick-plus:hover,
+.main header .quick-plus.open{
+  background:#211c2a;
+  border-color:#66518b;
+  color:#c8b8ed;
+  box-shadow:none;
+}
+.main header .quick-menu{
+  top:45px;
+}
+
+/* Remove obsolete dashboard quick-action presentation rules */
+.quick-dash{display:none}
