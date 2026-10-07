@@ -424,3 +424,137 @@ tr:hover td{background:rgba(255,255,255,.012)}
 
 /* Remove obsolete dashboard quick-action presentation rules */
 .quick-dash{display:none}
+
+
+/* Persuna App — UI/UX readability correction
+   Establishes a practical product UI scale: readable type, 40–44px controls,
+   20–22px interface icons, restrained premium contrast. */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Vazirmatn:wght@400;500;600&display=swap');
+
+html,body,#root{font-family:Inter,Vazirmatn,"Segoe UI",system-ui,-apple-system,sans-serif}
+body{font-size:14px;line-height:1.5;letter-spacing:0}
+button,input,select,textarea{font-family:inherit;font-size:14px}
+
+/* Navigation */
+.brand b{font-size:14px;font-weight:600}
+.brand small{font-size:11px}
+.nav button,.quick{min-height:42px;padding:9px 12px;font-size:14px;gap:11px;font-weight:400}
+.nav button svg,.quick svg{width:20px;height:20px;stroke-width:1.65}
+.nav em{font-size:10px;padding:2px 6px}
+.label{font-size:10px;letter-spacing:1.4px}
+
+/* Header */
+.main header{height:72px;padding:0 28px;gap:14px}
+.search{height:42px;padding:9px 13px}
+.search svg,.field svg{width:19px;height:19px;stroke-width:1.65}
+.search input,.field input{font-size:14px}
+.bell{width:42px;height:42px}
+.bell svg{width:20px;height:20px;stroke-width:1.65}
+.profile{gap:10px}
+.profile small{font-size:11px}
+.avatar{width:38px;height:38px}
+
+/* Page heading */
+.content{padding:32px 32px 52px}
+.head{margin:5px 0 24px}
+.ey{font-size:10px;letter-spacing:1.6px;font-weight:600}
+.head h1{font-size:30px;line-height:1.2;letter-spacing:-.5px;font-weight:600;margin:7px 0 5px}
+.head p{font-size:13px;line-height:1.5}
+
+/* Buttons */
+.primary,.btn,.new{min-height:40px;padding:9px 14px;font-size:14px;font-weight:500;border-radius:8px}
+.primary svg,.btn svg,.new svg{width:18px;height:18px;stroke-width:1.7}
+.icon-btn{width:40px;height:40px;display:grid;place-items:center}
+.icon-btn svg{width:19px;height:19px;stroke-width:1.65}
+
+/* KPI */
+.kpis{gap:14px}
+.kpi{padding:18px;min-height:136px}
+.kpi>span{font-size:12px}
+.kpi strong{font-size:27px;line-height:1.15;margin:14px 0 5px;font-weight:600}
+.kpi small{font-size:11px}
+.kicon{width:40px;height:40px;border-radius:9px}
+.kicon svg{width:21px;height:21px;stroke-width:1.65}
+
+/* Panels and cards */
+.panel{padding:18px;min-height:220px}
+.panel-head{margin-bottom:14px}
+.panel-head h3{font-size:15px;font-weight:600}
+.link{font-size:12px}
+.task,.meeting{padding:10px 2px;gap:11px}
+.task b,.meeting b{font-size:13px;font-weight:500}
+.task small,.meeting small{font-size:11px}
+.check{width:18px;height:18px}
+.check svg{width:13px;height:13px}
+.task em,.status{font-size:10px;padding:4px 7px}
+
+/* Tables */
+.table{padding:17px}
+table{font-size:12px}
+th{font-size:11px;padding:10px}
+td{font-size:13px;padding:12px 10px}
+td b{font-size:13px;font-weight:500}
+td small{font-size:11px}
+.action-btn{min-height:34px;padding:7px 10px;font-size:12px}
+.action-btn svg{width:17px;height:17px}
+
+/* Search / fields / filters */
+.field{height:42px;padding:9px 12px}
+.toolbar select{min-height:40px;padding:8px 11px;font-size:13px}
+
+/* Entity lists */
+.entity{padding:15px 16px}
+.entity>b,.entity>div>b{font-size:14px;font-weight:500}
+.entity small{font-size:11px}
+.type-pill{font-size:10px;padding:4px 7px}
+
+/* Calendar */
+.calbox{padding:18px}
+.calbox h3{font-size:15px}
+.calendar{gap:5px}
+.calendar>b{font-size:10px;padding:8px}
+.calday{height:94px;padding:9px}
+.calday>span{font-size:12px}
+.calday small{font-size:10px;padding:5px}
+
+/* Modal / forms */
+.modal{padding:22px}
+.modal h2{font-size:22px;line-height:1.25}
+.modal label,.setting-form label,.account-card label{font-size:12px}
+.modal input,.modal textarea,.modal select,.setting-form input,.setting-form select,.account-card input{min-height:42px;padding:10px 12px;font-size:14px}
+.form-section-title{font-size:11px}
+.form-grid{gap:12px}
+.form-section{margin-bottom:18px}
+
+/* Settings / reports */
+.report,.setting{padding:19px;min-height:135px}
+.report span,.setting span{font-size:12px}
+.report strong,.setting strong{font-size:24px;font-weight:600}
+.report small,.setting small{font-size:11px}
+.settings-tabs button{min-height:42px;font-size:12px;padding:10px 13px}
+.settings-tabs button svg{width:18px;height:18px}
+
+/* Keep the dashboard + launcher compact but clearly visible */
+.quick-launch .quick-plus{width:42px;height:42px}
+.quick-plus svg{width:21px;height:21px;stroke-width:1.65}
+
+/* Generic interface icons: never shrink below a usable touch/visual size. */
+.row-actions svg,.actions svg{width:18px;height:18px}
+@media(max-width:720px){
+  body{font-size:14px}
+  .main header{height:64px;padding:0 14px}
+  .hamb svg{width:21px;height:21px}
+  .search{height:40px}
+  .bell{width:40px;height:40px}
+  .content{padding:22px 14px 38px}
+  .head h1{font-size:24px}
+  .head p{font-size:13px}
+  .kpi{padding:14px;min-height:112px}
+  .kpi strong{font-size:22px}
+  .kicon{width:36px;height:36px}
+  .kicon svg{width:20px;height:20px}
+  .panel,.table{padding:14px}
+  td{padding:11px 8px}
+  .nav button,.quick{min-height:44px}
+}
+
