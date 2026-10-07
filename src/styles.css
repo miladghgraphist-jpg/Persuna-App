@@ -715,3 +715,6 @@ td small{font-size:11px}
 @media(max-width:720px){
   .notification-panel{top:58px;right:14px;width:min(330px,calc(100vw - 28px))}
 }
+
+/* Final responsive polish: keep notifications available on mobile. */
+@media(max-width:720px){.main header{gap:8px}.main header .bell{display:grid;place-items:center;width:38px;height:38px;flex:0 0 38px}.main header .profile-btn .avatar{width:34px;height:34px}.search{min-width:0}.search input{min-width:0}.dash-hero{gap:14px}.dash-hero-right{gap:10px}}
