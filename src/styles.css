@@ -650,3 +650,68 @@ td small{font-size:11px}
 .dash-date b{font-size:13px;font-weight:450;color:#a9a2aa}
 .dash-hero .quick-launch{margin-top:1px}
 @media(max-width:480px){.dash-hero h1{font-size:25px}.dash-kicker{font-size:10px}.dash-date{margin-top:7px}.dash-date b{font-size:12px}}
+
+/* Dashboard header — studio identity left, date + quick action right */
+.dash-hero{align-items:center;padding:6px 2px 14px}
+.dash-identity{display:flex;align-items:center;min-height:42px}
+.dash-kicker{font-size:12px;letter-spacing:1.9px;color:#b0a9b3;font-weight:500}
+.dash-hero-right{display:flex;align-items:center;gap:16px;margin-left:auto}
+.dash-date{display:flex;align-items:baseline;gap:9px;margin:0}
+.dash-date span{font-size:12px;color:#777178}
+.dash-date b{font-size:13px;font-weight:450;color:#a9a2aa}
+.dash-hero .quick-launch{margin:0}
+.dash-hero .quick-plus{width:42px;height:42px}
+.dash-hero .quick-menu{right:0;left:auto}
+@media(max-width:480px){
+  .dash-hero{padding-bottom:11px}
+  .dash-kicker{font-size:10px;letter-spacing:1.6px}
+  .dash-hero-right{gap:9px}
+  .dash-date{gap:5px}
+  .dash-date span,.dash-date b{font-size:11px}
+  .dash-hero .quick-plus{width:40px;height:40px}
+}
+
+/* Notifications — functional, restrained, reusable across the app */
+.main header{position:relative}
+.notification-panel{
+  position:absolute;
+  z-index:50;
+  top:62px;
+  right:92px;
+  width:330px;
+  background:#1b1b1b;
+  border:1px solid #353238;
+  border-radius:10px;
+  box-shadow:0 20px 55px rgba(0,0,0,.48);
+  overflow:hidden;
+  animation:notificationIn .16s ease both;
+}
+@keyframes notificationIn{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+.notification-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:15px 16px 13px;
+  border-bottom:1px solid #29262b;
+}
+.notification-head h3{margin:4px 0 0;font-size:14px;font-weight:500;color:#eeeaf0}
+.notification-close{
+  width:30px;height:30px;display:grid;place-items:center;
+  border:0;background:transparent;color:#777178;border-radius:6px
+}
+.notification-close:hover{background:#242126;color:#e7e2e9}
+.notification-item{
+  display:flex;gap:10px;padding:12px 16px;border-bottom:1px solid #27252a
+}
+.notification-item:last-child{border-bottom:0}
+.notification-mark{
+  width:28px;height:28px;display:grid;place-items:center;flex:none;
+  border:1px solid #38323d;border-radius:7px;color:#a78bfa
+}
+.notification-mark.urgent{color:#c47791;border-color:#4a303a}
+.notification-item b{display:block;font-size:12px;font-weight:500;color:#e7e2e8}
+.notification-item small{display:block;margin-top:3px;font-size:10px;color:#777178;line-height:1.4}
+.notification-empty{padding:22px 16px;color:#777178;font-size:11px;text-align:center}
+@media(max-width:720px){
+  .notification-panel{top:58px;right:14px;width:min(330px,calc(100vw - 28px))}
+}
