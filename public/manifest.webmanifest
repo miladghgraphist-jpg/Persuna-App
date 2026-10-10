@@ -1,0 +1,15 @@
+{
+  "id": "/",
+  "name": "Persuna Studio App",
+  "short_name": "Persuna",
+  "description": "Persuna Studio operations workspace",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#151515",
+  "theme_color": "#151515",
+  "orientation": "any",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" }
+  ]
+}
